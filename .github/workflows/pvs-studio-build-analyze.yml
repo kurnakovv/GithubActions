@@ -1,5 +1,8 @@
 name: PVS-Studio build analysis
-on: workflow_dispatch
+on:
+  push:
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
   build-analyze:
     runs-on: ubuntu-latest
@@ -20,6 +23,7 @@ jobs:
           ls
           cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=On -B build .
           cmake --build build -j
+          ls
       - name: Analyze
         run: |
           pvs-studio-analyzer analyze -f build/compile_commands.json -j
