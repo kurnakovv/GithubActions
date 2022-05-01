@@ -21,6 +21,7 @@ jobs:
       - name: Build
         run: |
           cd ..
+          ls
           cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=On -B build .
           cmake --build build -j
       - name: Analyze
