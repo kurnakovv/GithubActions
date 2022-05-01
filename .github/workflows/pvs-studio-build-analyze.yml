@@ -18,7 +18,6 @@ jobs:
           sudo apt update
           sudo apt install pvs-studio
           pvs-studio-analyzer credentials ${{ secrets.PVS_STUDIO_CREDENTIALS }}
-          sudo make install
       - name: Build
         run: |
           ls
