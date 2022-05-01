@@ -17,7 +17,7 @@ jobs:
           pvs-studio-analyzer credentials ${{ secrets.PVS_STUDIO_CREDENTIALS }}
       - name: Build
         run: |
-          cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=On -B build .
+          cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=On -B build ConsoleApp
           cmake --build build -j
       - name: Analyze
         run: |
