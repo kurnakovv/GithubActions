@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.8.2)
 project("ConsoleApp" LANGUAGES CSharp)
 
 set(CMAKE_CSharp_FLAGS "/langversion:latest")
